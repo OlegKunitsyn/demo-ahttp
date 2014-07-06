@@ -10,24 +10,40 @@ This is a standard implementation of non-blocking HTTP server you can find in In
 
 The magic goes on line #118. Comment it out and run the test.
 
+
 ...
+
 Requested: resources/tiny.gif
+
 Received: 255
+
 Received: 255
+
 Received: 146
+
 Transmitted: 43
+
 ...
+
 
 In order to transmit 43 bytes we need to receive 656 bytes, huh. Now uncomment the line.
 
+
 ...
+
 Requested: resources/tiny.gif
+
 Received: 255
+
 Transmitted: 43
+
 Received: 255
+
 ...
+
 
 As we can see Java HTTP client accepts the forced response correctly. As well as the browsers. 
 In your project make the request handler smarter by cutting off GET line only.
+
 
 Have a nice day and several million dollar in a wallet!
